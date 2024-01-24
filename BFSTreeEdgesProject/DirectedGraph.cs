@@ -26,30 +26,42 @@ namespace BFSTreeEdgesProject
 
         public void BfsTreeEdges()
         {
+            // Set all vertices to initial
             int v;
             for(v = 0; v < n; v++)
                 vertexList[v].state = INITIAL;
 
             Console.Write("Enter starting vertex for Breadth FirstSearch : ");
             String s = Console.ReadLine();
+            // Perform BFS on starting vertex
             BfsTree( GetIndex(s) );
+            //Perform BFS on all unvisited vertices
             for(v = 0; v < n; v++)
                 if(vertexList[v].state == INITIAL)
                     BfsTree(v);
         }
+        // Perform BFS on the graph from a vertex printing the edges of visited vertices
         private void BfsTree( int v)
         {
+            // Create queue to store vertices
             Queue<int> qu = new Queue<int>();
+            // Add starting Vertex to queue
             qu.Enqueue(v);
             vertexList[v].state = WAITING;
+            // While queue isn't empty
             while( qu.Count!=0 )
             {
+                // Get first vertex from queue
                 v = qu.Dequeue();
+                // Set to visited
                 vertexList[v].state = VISITED;
+                // Loop through vertices
                 for(int i = 0; i < n; i++)
                 {
+                    // If vertex is adjacent to current vertex and unvisited
                     if(IsAdjacent(v,i) && vertexList[i].state == INITIAL)
                     {
+                        // Add vertex to queue, set state to waiting and print the edge
                         qu.Enqueue(i);
                         vertexList[i].state=WAITING;
                         Console.WriteLine("Tree Edge : ("+vertexList[v].name +","+vertexList[i].name +")");
@@ -59,6 +71,7 @@ namespace BFSTreeEdgesProject
             Console.WriteLine();
         }
 
+        // Set all vertices to initial and perform BFS on given vertex 
         public void BfsTraversal()
         {
             for (int v = 0; v < n; v++)
@@ -67,6 +80,7 @@ namespace BFSTreeEdgesProject
             String s = Console.ReadLine();
             Bfs(GetIndex(s));
         }
+        // Perform BFS on the graph from a vertex printing the names of visited vertices
         private void Bfs(int v)
         {
             Queue<int> qu = new Queue<int>();
@@ -88,6 +102,7 @@ namespace BFSTreeEdgesProject
             }
             Console.WriteLine();
         }
+        // Perform BFS on the graph from a given stating vertex then print the rest of the graph of unvisited vertices
         public void BfsTraversal_All()
         {
             int v;
@@ -100,6 +115,7 @@ namespace BFSTreeEdgesProject
                 if (vertexList[v].state == INITIAL)
                     Bfs(v);
         }
+
         public void InsertVertex(String name)
         {
             vertexList[n++] = new Vertex(name);

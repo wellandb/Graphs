@@ -25,12 +25,15 @@ namespace DepthFirstSearch
 
         public void DfsTraversal()
         {
-            for(int v = 0; v < n; v++)
+            // Set all vertices to initial and ask for a user input starting vertex
+            for (int v = 0; v < n; v++)
                 vertexList[v].state = INITIAL;
             Console.Write("Enter starting vertex for Depth First Search: ");
             String s = Console.ReadLine();
+            // Start DFS search from starting vertex
             Dfs( GetIndex(s) );
         }
+        // DFS search printing the name of visited vertices
         private void Dfs( int v)
         {
             Stack<int> st = new Stack<int>();
@@ -53,13 +56,16 @@ namespace DepthFirstSearch
         }
         public void DfsTraversal_All()
         {
+            // set all vertices to intial
             int v;
             for( v = 0; v < n; v++)
                 vertexList[v].state = INITIAL;
             Console.Write("Enter starting vertex for Depth First Search: ");
             String s = Console.ReadLine();
-            Dfs ( GetIndex(s) );
-            for( v = 0; v < n; v++)
+            // DFS search from starting vertex
+            Dfs( GetIndex(s) );
+            // DFS search on all other unvisited vertices 
+            for ( v = 0; v < n; v++)
                 if(vertexList[v].state == INITIAL)
                     Dfs(v);
         }

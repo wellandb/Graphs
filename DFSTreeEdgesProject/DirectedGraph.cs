@@ -27,6 +27,8 @@ namespace DFSTreeEdgesProject
 
         public void DfsTreeEdges()
         {
+            // Set all vertices to intial;
+            // set predecessors to NIL
             int v;
             for(v = 0; v < n; v++)
             {
@@ -56,16 +58,21 @@ namespace DFSTreeEdgesProject
 
         private void DfsTree(int v)
         {
+            // Create a stack and push vertex onto the stack
             Stack<int> st = new Stack<int>();
             st.Push(v);
             while( st.Count!=0 )
             {
+                // pop vertex from stack
                 v = st.Pop();
                 if( vertexList[v].state == INITIAL )
                 {
+                    // set to visited
                     Console.Write(vertexList[v].name +" ");
                     vertexList[v].state=VISITED;
                 }
+                // Loop down the vertex list and if adjacent to current vertex set the predecessor to current vertex
+                // push adjacent vertex onto the stack
                 for(int i = n-1; i>=0; i--)
                 {
                     if( IsAdjacent(v,i) && vertexList[i].state ==INITIAL )
@@ -79,12 +86,15 @@ namespace DFSTreeEdgesProject
         }
         public void DfsTraversal()
         {
+            // Set all vertices to initial and ask for a user input starting vertex
             for(int v = 0; v < n; v++)
                 vertexList[v].state = INITIAL;
             Console.Write("Enter starting vertex for Depth First Search: ");
             String s = Console.ReadLine();
+            // Start DFS search from starting vertex
             Dfs( GetIndex(s) );
         }
+        // DFS search printing the name of visited vertices
         private void Dfs( int v)
         {
             Stack<int> st = new Stack<int>();
@@ -107,12 +117,15 @@ namespace DFSTreeEdgesProject
         }
         public void DfsTraversal_All()
         {
+            // set all vertices to intial
             int v;
             for( v = 0; v < n; v++)
                 vertexList[v].state = INITIAL;
             Console.Write("Enter starting vertex for Depth First Search: ");
             String s = Console.ReadLine();
+            // DFS search from starting vertex
             Dfs ( GetIndex(s) );
+            // DFS search on all other unvisited vertices 
             for( v = 0; v < n; v++)
                 if(vertexList[v].state == INITIAL)
                     Dfs(v);

@@ -23,6 +23,7 @@ namespace BreadthFirstSearch
             adj = new bool [MAX_VERTICES,MAX_VERTICES];
             vertexList = new Vertex [MAX_VERTICES];
         }
+        // Set all vertices to initial and perform BFS on given vertex 
         public void BfsTraversal()
         {
             for(int v = 0; v < n; v++)
@@ -31,6 +32,7 @@ namespace BreadthFirstSearch
             String s = Console.ReadLine();
             Bfs( GetIndex(s) );
         }
+        // Perform BFS on the graph from a vertex printing the names of visited vertices
         private void Bfs(int v)
         {
             Queue<int> qu = new Queue<int>();
@@ -52,6 +54,7 @@ namespace BreadthFirstSearch
             }
             Console.WriteLine();
         }
+        // Perform BFS on the graph from a given stating vertex then print the rest of the graph of unvisited vertices
         public void BfsTraversal_All()
         {
             int v;

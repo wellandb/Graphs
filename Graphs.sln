@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graphs", "Graphs\Graphs.csproj", "{7DE535AD-9029-4EF1-B7E4-D4C0BC2B3ECB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Graphs", "Graphs\Graphs.csproj", "{7DE535AD-9029-4EF1-B7E4-D4C0BC2B3ECB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BreadthFirstSearch", "BreadthFirstSearch\BreadthFirstSearch.csproj", "{8DE83ABD-D74C-4A67-A27D-6DBDDE4EB49C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BreadthFirstSearch", "BreadthFirstSearch\BreadthFirstSearch.csproj", "{8DE83ABD-D74C-4A67-A27D-6DBDDE4EB49C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BFSTreeEdgesProject", "BFSTreeEdgesProject\BFSTreeEdgesProject.csproj", "{5984900C-D0B9-4B1F-9E62-4F40EA632425}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BFSTreeEdgesProject", "BFSTreeEdgesProject\BFSTreeEdgesProject.csproj", "{5984900C-D0B9-4B1F-9E62-4F40EA632425}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DepthFirstSearch", "DepthFirstSearch\DepthFirstSearch.csproj", "{71714EFF-9407-45A9-9D29-F45A7A52ABAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DepthFirstSearch", "DepthFirstSearch\DepthFirstSearch.csproj", "{71714EFF-9407-45A9-9D29-F45A7A52ABAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DFSTreeEdgesProject", "DFSTreeEdgesProject\DFSTreeEdgesProject.csproj", "{6095D6F8-9C5D-4B36-85DD-F4CECC65386B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DFSTreeEdgesProject", "DFSTreeEdgesProject\DFSTreeEdgesProject.csproj", "{6095D6F8-9C5D-4B36-85DD-F4CECC65386B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DijkstraShortestPath", "DijkstraShortestPath\DijkstraShortestPath.csproj", "{6530E157-8100-46F2-8C87-FF4B5441E9F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{6095D6F8-9C5D-4B36-85DD-F4CECC65386B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6095D6F8-9C5D-4B36-85DD-F4CECC65386B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6095D6F8-9C5D-4B36-85DD-F4CECC65386B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6530E157-8100-46F2-8C87-FF4B5441E9F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6530E157-8100-46F2-8C87-FF4B5441E9F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6530E157-8100-46F2-8C87-FF4B5441E9F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6530E157-8100-46F2-8C87-FF4B5441E9F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
